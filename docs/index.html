@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เอกสารความปลอดภัยสารเคมี (SDS) — QR</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --text:#1a1d21; --muted:#5b6470;
+    --line:#e6e8ec; --accent:#c8102e; --accent-ink:#ffffff; --shadow:0 1px 3px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0f1115;--card:#171a20;--text:#eef1f5;--muted:#9aa4b2;--line:#252a33;--accent:#ff4d64;--shadow:0 1px 3px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);}
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Segoe UI",Tahoma,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+  header{padding:40px 20px 28px;text-align:center;border-bottom:1px solid var(--line);background:var(--card);}
+  header h1{margin:0 0 6px;font-size:clamp(1.35rem,4vw,1.9rem);}
+  header p{margin:0;color:var(--muted);font-size:.95rem;}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 60px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .15s ease;}
+  .card:hover{transform:translateY(-3px);}
+  .card img{width:100%;max-width:200px;height:auto;border-radius:10px;background:#fff;padding:6px;}
+  .code{font-weight:700;margin-top:12px;font-size:1.05rem;}
+  .name{color:var(--muted);font-size:.9rem;min-height:2.4em;margin:2px 0 14px;}
+  .btn{display:inline-block;width:100%;padding:11px 14px;border-radius:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:.95rem;}
+  .btn:active{opacity:.85;}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;padding:24px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>เอกสารความปลอดภัยสารเคมี (SDS)</h1>
+  <p>สแกน QR หรือกดปุ่มเพื่อเปิดเอกสาร PDF · ทั้งหมด 9 รายการ</p>
+</header>
+<div class="wrap">
+  <div class="grid" id="grid"></div>
+</div>
+<footer>QR Code SDS · สร้างด้วย Claude Code</footer>
+<script>
+  const items = [
+    ["EX-SF-02","KEROSENE (น้ำมันก๊าด)","EX-SF-02-KEROSENE.pdf"],
+    ["EX-SF-03","PN331 PHOSPHATE","EX-SF-03-PN331-PHOSPHATE.pdf"],
+    ["EX-SF-04","PF18 PHOSPHATE","EX-SF-04-PF18-PHOSPHATE.pdf"],
+    ["EX-SF-05","PK33 PHOSPHATE","EX-SF-05-PK33-PHOSPHATE.pdf"],
+    ["EX-SF-06","PD10 PHOSPHATE","EX-SF-06-PD10-PHOSPHATE.pdf"],
+    ["EX-SF-07","AC55 PHOSPHATE","EX-SF-07-AC55-PHOSPHATE.pdf"],
+    ["EX-SF-08","RTL2000 EDP","EX-SF-08-RTL2000-EDP.pdf"],
+    ["EX-SF-09","RTL2001 EDP","EX-SF-09-RTL2001-EDP.pdf"],
+    ["EX-SF-10","RTL2002 EDP","EX-SF-10-RTL2002-EDP.pdf"],
+  ];
+  const grid = document.getElementById("grid");
+  for (const [code,name,pdf] of items){
+    const c = document.createElement("div");
+    c.className = "card";
+    c.innerHTML =
+      `<img src="qr/${code}.png" alt="QR ${code}" loading="lazy">`+
+      `<div class="code">${code}</div>`+
+      `<div class="name">${name}</div>`+
+      `<a class="btn" href="pdf/${encodeURIComponent(pdf)}" target="_blank" rel="noopener">เปิดเอกสาร PDF</a>`;
+    grid.appendChild(c);
+  }
+</script>
+</body>
+</html>
