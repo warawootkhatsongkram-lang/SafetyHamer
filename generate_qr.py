@@ -42,6 +42,9 @@ ITEMS = [
     ("EX-SF-16", "THINNER 3A (ทินเนอร์)",   "EX-SF-16-THINNER3A-MT-TH.pdf"),
     ("EX-SF-17", "GEAR OIL (น้ำมันเกียร์)", "EX-SF-17- GEAR-OIL-MT-TH.pdf"),
     ("EX-SF-18", "DIESEL (น้ำมันดีเซล)",    "EX-SF18-DIESEL-FL-TH.pdf"),
+    ("EX-SF-04-TH", "PF18 PHOSPHATE (ไทย)", "EX-SF-04-PF18-PHOSPHATE-TH.pdf"),
+    ("EX-SF-05-TH", "PK33 PHOSPHATE (ไทย)", "EX-SF-05-PK33-PHOSPHATE-TH.pdf"),
+    ("EX-SF-19", "ARGON (อาร์กอน)",          "EX-SF19-ARGON-WD-TH.pdf"),
 ]
 
 PLACEHOLDER = "https://USERNAME.github.io/REPO"
