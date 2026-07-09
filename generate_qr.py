@@ -35,6 +35,7 @@ ITEMS = [
     ("EX-SF-08", "RTL2000 EDP",            "EX-SF-08-RTL2000-EDP.pdf"),
     ("EX-SF-09", "RTL2001 EDP",            "EX-SF-09-RTL2001-EDP.pdf"),
     ("EX-SF-10", "RTL2002 EDP",            "EX-SF-10-RTL2002-EDP.pdf"),
+    ("EX-SF-11", "ADHESION PROMOTER 520 (สารส่งเสริมการยึดเกาะ)", "EX-SF-11-ADHESIONPROMOTER520-PK-TH.pdf"),
     ("EX-SF-12", "OXYGEN (ออกซิเจน)",       "EX-SF-12-OXYGEN-WD-TH.pdf"),
     ("EX-SF-13", "CO2 (คาร์บอนไดออกไซด์)",  "EX-SF-13-CO2-WD-TH.pdf"),
     ("EX-SF-14", "NITROGEN (ไนโตรเจน)",     "EX-SF-14-NITROGEN-WD-TH.pdf"),
